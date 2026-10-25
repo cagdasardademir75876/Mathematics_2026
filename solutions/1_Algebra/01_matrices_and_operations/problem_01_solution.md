@@ -45,7 +45,7 @@ Matrix $B$ has $3$ rows and $2$ columns. Thus, the size of $B$ is $3 \times 2$.
 The second row of matrix $A$ as a row vector is:
 
 $$
-r_2(A)=\begin{pmatrix}0 & 4 & 5 \\\end{pmatrix}
+r_2(A) = \begin{pmatrix} 0 & 4 & 5 \end{pmatrix}
 $$
 
 The first column of matrix $B$ as a column vector is:
