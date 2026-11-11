@@ -93,11 +93,15 @@ $$
 Equating the corresponding entries of $AB$ and $BA$:
 
 $$
+AB =
 \begin{pmatrix}
 a + c & b + d \\
 c & d
 \end{pmatrix}
-=
+$$
+
+$$
+BA =
 \begin{pmatrix}
 a & a + b \\
 c & c + d
@@ -110,7 +114,7 @@ This gives the following system of equations for the entries:
 3. $c = c$ (trivially satisfied since $c = 0$)
 4. $d = c + d \implies c = 0$ (consistent with the first condition)
 
-Thus, the conditions for $AB = commutator$ to hold are:
+Thus, the conditions for $AB = BA$ to hold are:
 - $c = 0$
 - $d = a$
 - $a$ and $b$ can be any arbitrary real numbers.
