@@ -177,7 +177,10 @@ A^{n+1} =
 1 & 1 + n \\
 0 & 1
 \end{pmatrix}
-=
+$$
+
+$$
+A^{n+1} =
 \begin{pmatrix}
 1 & n + 1 \\
 0 & 1
