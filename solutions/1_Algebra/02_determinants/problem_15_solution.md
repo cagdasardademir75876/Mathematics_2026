@@ -1,4 +1,3 @@
-
 ### Exercise 15. Combining Determinant Properties
 
 **Problem**
