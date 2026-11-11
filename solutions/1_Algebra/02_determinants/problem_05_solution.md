@@ -26,13 +26,13 @@ We will use elementary row operations to reduce matrix $A$ to an upper triangula
   Perform the row operation $R_2 \leftarrow R_2 - 2R_1$:
 
   $$
-  R_2 - 2R_1 = (2 - 2(1), \; 1 - 2(2), \; 0 - 2(3)) = (0, -3, -6)
+  R_2 - 2R_1 = (2 - 2(1), \, 1 - 2(2), \, 0 - 2(3)) = (0, -3, -6)
   $$
 
   Perform the row operation $R_3 \leftarrow R_3 + R_1$:
 
   $$
-  R_3 + R_1 = (-1 + 1, \; 4 + 2, \; 2 + 3) = (0, 6, 5)
+  R_3 + R_1 = (-1 + 1, \, 4 + 2, \, 2 + 3) = (0, 6, 5)
   $$
 
   *Effect on Determinant:* Adding a multiple of one row to another **does not change** the value of the determinant. Thus, the determinant remains equal to $\det(A)$.
@@ -55,7 +55,7 @@ We will use elementary row operations to reduce matrix $A$ to an upper triangula
   Perform the row operation $R_3 \leftarrow R_3 + 2R_2$:
 
   $$
-  R_3 + 2R_2 = (0 + 2(0), \; 6 + 2(-3), \; 5 + 2(-6)) = (0, 0, -7)
+  R_3 + 2R_2 = (0 + 2(0), \, 6 + 2(-3), \, 5 + 2(-6)) = (0, 0, -7)
   $$
 
   *Effect on Determinant:* Again, adding a multiple of one row to another **does not change** the determinant.
