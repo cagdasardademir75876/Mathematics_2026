@@ -1,88 +1,112 @@
 ### Exercise 2. Addition and Scalar Multiplication
 
-Given
+**Problem**
+
+For
 
 $$
-A=\begin{pmatrix}
+A=
+\begin{pmatrix}
 1 & 2 \\
 -1 & 3 \\
 \end{pmatrix}
-$$
-
-and
-
-$$
-B=\begin{pmatrix}
+\qquad
+B=
+\begin{pmatrix}
 4 & -2 \\
 0 & 5 \\
 \end{pmatrix}
 $$
 
----
-
-#### 1. Computations
-
-**Computation of $A+B$:**
+compute
 
 $$
-A+B = \begin{pmatrix}
+A+B, \qquad A-B, \qquad 3A-2B.
+$$
+
+Explain why matrix addition is possible only for matrices of the same size.
+
+**Solution**
+
+**Part 1: Matrix Operations**
+
+- Compute $A+B$:
+
+$$
+A+B =
+\begin{pmatrix}
 1+4 & 2+(-2) \\
 -1+0 & 3+5 \\
 \end{pmatrix}
-= \begin{pmatrix}
+=
+\begin{pmatrix}
 5 & 0 \\
 -1 & 8 \\
 \end{pmatrix}
 $$
 
-**Computation of $A-B$:**
+- Compute $A-B$:
 
 $$
-A-B = \begin{pmatrix}
+A-B =
+\begin{pmatrix}
 1-4 & 2-(-2) \\
 -1-0 & 3-5 \\
 \end{pmatrix}
-= \begin{pmatrix}
+=
+\begin{pmatrix}
 -3 & 4 \\
 -1 & -2 \\
 \end{pmatrix}
 $$
 
-**Computation of $3A-2B$:**
+- Compute $3A-2B$:
 
-First, calculate the scalar multiples:
+First, calculate the scalar multiples $3A$ and $2B$:
 
 $$
-3A = \begin{pmatrix}
+3A =
+\begin{pmatrix}
+3(1) & 3(2) \\
+3(-1) & 3(3) \\
+\end{pmatrix}
+=
+\begin{pmatrix}
 3 & 6 \\
 -3 & 9 \\
 \end{pmatrix}
 $$
 
 $$
-2B = \begin{pmatrix}
+2B =
+\begin{pmatrix}
+2(4) & 2(-2) \\
+2(0) & 2(5) \\
+\end{pmatrix}
+=
+\begin{pmatrix}
 8 & -4 \\
 0 & 10 \\
 \end{pmatrix}
 $$
 
-Subtracting $2B$ from $3A$:
+Subtract $2B$ from $3A$:
 
 $$
-3A-2B = \begin{pmatrix}
+3A-2B =
+\begin{pmatrix}
 3-8 & 6-(-4) \\
 -3-0 & 9-10 \\
 \end{pmatrix}
-= \begin{pmatrix}
+=
+\begin{pmatrix}
 -5 & 10 \\
 -3 & -1 \\
 \end{pmatrix}
 $$
 
----
+**Part 2: Compatibility Requirement for Addition**
 
-#### 2. Dimension Compatibility Requirement
+Matrix addition is defined entry-by-entry, meaning that the entry in row $i$ and column $j$ of the sum matrix is obtained by adding the corresponding entry $a_{ij}$ of the first matrix to $b_{ij}$ of the second matrix. 
 
-Matrix addition and subtraction are defined element-wise, meaning that the entry in row $i$ and column $j$ of the first matrix is added to (or subtracted from) the entry in row $i$ and column $j$ of the second matrix. 
-
-If two matrices have different sizes, there is no one-to-one correspondence between their entries, leaving some entries without a corresponding term to pair with. Therefore, matrix addition is defined only for matrices of the same dimensions.
+If two matrices have different dimensions, at least one entry in one matrix will not have a corresponding entry in the other matrix. Therefore, matrix addition is defined only when both matrices have the exact same size (the same number of rows and columns).
