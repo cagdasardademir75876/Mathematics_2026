@@ -1,55 +1,44 @@
-### Exercise 4. Triangular Matrix
 
-**Problem**
+### Solution
 
-Without expanding the determinant, compute
+#### Part 1: Computing the Determinant
 
-$$
-\det
-\begin{pmatrix}
-2 & 4 & 1 \\
-0 & -3 & 5 \\
-0 & 0 & 7
-\end{pmatrix}
-$$
+The given matrix is an **upper triangular matrix** because all entries below the main diagonal are zero.
 
-State the rule for an arbitrary triangular matrix and explain it using this example.
+For any triangular matrix, the determinant is equal to the product of the entries on its main diagonal.
 
-**Solution**
-
-**Part 1: Computing the Determinant**
-
-The given matrix is an **upper triangular matrix** because all entries below the main diagonal are zeros ($0$).
-
-According to the rule for triangular matrices, the determinant of a triangular matrix (upper or lower) is simply equal to the **product of the entries on its main diagonal**.
-
-Applying this rule to the given matrix:
+Therefore:
 
 $$
-\det = (2) \cdot (-3) \cdot (7)
+\det(A) = 2 \cdot (-3) \cdot 7
 $$
 
 $$
-\det = -6 \cdot 7 = -42
+\boxed{\det(A) = -42}
 $$
 
-Thus, the determinant is $-42$.
+#### Part 2: General Rule for Triangular Matrices
 
-**Part 2: Rule for an Arbitrary Triangular Matrix and Explanation**
+For any \(n \times n\) triangular matrix (upper or lower), the determinant is the product of all diagonal entries.
 
-- **General Rule:** 
-  For any $n \times n$ triangular matrix (where all entries either above or below the main diagonal are zero), the determinant is given by the product of its diagonal elements:
-  $$
-  \det(A) = a_{11} a_{22} a_{33} \cdots a_{nn} = \prod_{i=1}^{n} a_{ii}
-  $$
+The general formula is:
 
-- **Explanation Using This Example:**
-  If we were to evaluate this determinant via cofactor expansion along the first column, we would only have the top-left entry ($2$) multiplied by the determinant of the remaining $2 \times 2$ submatrix:
-  $$
-  2 \cdot
-  \begin{vmatrix}
-  -3 & 5 \\
-  0 & 7
-  \end{vmatrix}
-  $$
-  For this resulting $2 \times 2$ triangular matrix, expanding again yields $(-3) \cdot (7)$. Combining these steps gives the product of all three diagonal elements: $2 \cdot (-3) \cdot (-7) = -42$. This recursive expansion demonstrates why the determinant of any triangular matrix always collapses to the product of its diagonal entries.
+$$
+\boxed{\det(A) = \prod_{i=1}^{n} a_{ii}}
+$$
+
+#### Part 3: Explanation Using This Example
+
+In the given matrix, the diagonal entries are \(2\), \(-3\), and \(7\).
+
+All entries below the main diagonal are zero. This means that the determinant can be calculated directly by multiplying the diagonal entries without expanding the determinant.
+
+Thus:
+
+$$
+\det(A) = 2 \cdot (-3) \cdot 7 = -42
+$$
+
+This example demonstrates that the determinant of any triangular matrix is always equal to the product of its main diagonal entries.
+
+> **Why this exercise:** reinforces an important property of triangular matrices.
