@@ -37,15 +37,17 @@ We will use elementary row operations to reduce matrix $A$ to an upper triangula
 
   *Effect on Determinant:* Adding a multiple of one row to another **does not change** the value of the determinant. Thus, the determinant remains equal to $\det(A)$.
 
-  The matrix becomes:
+  The matrix becomes $A_1$:
 
   $$
-  A_1 =
+  \begin{aligned}
+  A_1 &=
   \begin{pmatrix}
   1 & 2 & 3 \\
   0 & -3 & -6 \\
   0 & 6 & 5
   \end{pmatrix}
+  \end{aligned}
   $$
 
 - **Step 2:** Eliminate the entry below the leading entry in the second column.
@@ -61,12 +63,14 @@ We will use elementary row operations to reduce matrix $A$ to an upper triangula
   The matrix is now in upper triangular form ($A_2$):
 
   $$
-  A_2 =
+  \begin{aligned}
+  A_2 &=
   \begin{pmatrix}
   1 & 2 & 3 \\
   0 & -3 & -6 \\
   0 & 0 & -7
   \end{pmatrix}
+  \end{aligned}
   $$
 
 **Part 2: Computing the Final Determinant**
