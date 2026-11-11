@@ -8,7 +8,7 @@ $$
 A=
 \begin{pmatrix}
 1 & 2 & 3 \\
-4 & 5 & 6 \\
+4 & 5 & 6
 \end{pmatrix}
 $$
 
@@ -19,7 +19,7 @@ B=
 \begin{pmatrix}
 1 & 0 \\
 2 & 1 \\
--1 & 3 \\
+-1 & 3
 \end{pmatrix}
 $$
 
@@ -42,7 +42,7 @@ A^T =
 \begin{pmatrix}
 1 & 4 \\
 2 & 5 \\
-3 & 6 \\
+3 & 6
 \end{pmatrix}
 $$
 
@@ -52,7 +52,7 @@ $$
 B^T =
 \begin{pmatrix}
 1 & 2 & -1 \\
-0 & 1 & 3 \\
+0 & 1 & 3
 \end{pmatrix}
 $$
 
@@ -64,12 +64,12 @@ $$
 AB =
 \begin{pmatrix}
 1 & 2 & 3 \\
-4 & 5 & 6 \\
+4 & 5 & 6
 \end{pmatrix}
 \begin{pmatrix}
 1 & 0 \\
 2 & 1 \\
--1 & 3 \\
+-1 & 3
 \end{pmatrix}
 $$
 
@@ -79,7 +79,7 @@ $$
 AB =
 \begin{pmatrix}
 1(1) + 2(2) + 3(-1) & 1(0) + 2(1) + 3(3) \\
-4(1) + 5(2) + 6(-1) & 4(0) + 5(1) + 6(3) \\
+4(1) + 5(2) + 6(-1) & 4(0) + 5(1) + 6(3)
 \end{pmatrix}
 $$
 
@@ -89,7 +89,7 @@ $$
 AB =
 \begin{pmatrix}
 1 + 4 - 3 & 0 + 2 + 9 \\
-4 + 10 - 6 & 0 + 5 + 18 \\
+4 + 10 - 6 & 0 + 5 + 18
 \end{pmatrix}
 $$
 
@@ -99,39 +99,42 @@ $$
 AB =
 \begin{pmatrix}
 2 & 11 \\
-8 & 23 \\
+8 & 23
 \end{pmatrix}
 $$
 
 **Part 3: Verifying $(AB)^T = B^TA^T$**
 
-- Left-hand side, $(AB)^T$:
+- Compute the left-hand side, $(AB)^T$:
 
 $$
 (AB)^T =
 \begin{pmatrix}
 2 & 11 \\
-8 & 23 \\
+8 & 23
 \end{pmatrix}^T
-=
+$$
+
+$$
+(AB)^T =
 \begin{pmatrix}
 2 & 8 \\
-11 & 23 \\
+11 & 23
 \end{pmatrix}
 $$
 
-- Right-hand side, $B^TA^T$:
+- Compute the right-hand side, $B^TA^T$:
 
 $$
 B^TA^T =
 \begin{pmatrix}
 1 & 2 & -1 \\
-0 & 1 & 3 \\
+0 & 1 & 3
 \end{pmatrix}
 \begin{pmatrix}
 1 & 4 \\
 2 & 5 \\
-3 & 6 \\
+3 & 6
 \end{pmatrix}
 $$
 
@@ -141,7 +144,7 @@ $$
 B^TA^T =
 \begin{pmatrix}
 1(1) + 2(2) + (-1)(3) & 1(4) + 2(5) + (-1)(6) \\
-0(1) + 1(2) + 3(3) & 0(4) + 1(5) + 3(6) \\
+0(1) + 1(2) + 3(3) & 0(4) + 1(5) + 3(6)
 \end{pmatrix}
 $$
 
@@ -151,7 +154,7 @@ $$
 B^TA^T =
 \begin{pmatrix}
 1 + 4 - 3 & 4 + 10 - 6 \\
-0 + 2 + 9 & 0 + 5 + 18 \\
+0 + 2 + 9 & 0 + 5 + 18
 \end{pmatrix}
 $$
 
@@ -161,7 +164,7 @@ $$
 B^TA^T =
 \begin{pmatrix}
 2 & 8 \\
-11 & 23 \\
+11 & 23
 \end{pmatrix}
 $$
 
