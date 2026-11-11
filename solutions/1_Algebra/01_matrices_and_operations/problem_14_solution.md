@@ -1,39 +1,105 @@
 ### Exercise 14. Rotation Matrices
 
-The matrix for a rotation through an angle $\theta$ is defined as:
+**Problem**
 
-$$R(\theta)=\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \\ \end{pmatrix}$$
+The matrix for a rotation through an angle $\theta$ is
 
----
+$$
+R(\theta)=
+\begin{pmatrix}
+\cos\theta & -\sin\theta \\
+\sin\theta & \cos\theta
+\end{pmatrix}
+$$
 
-#### 1. Computation of $R(\alpha)R(\beta)$
+Compute $R(\alpha)R(\beta)$ and, using the angle-sum formulas for sine and cosine, show that
 
-Multiplying the two rotation matrices $R(\alpha)$ and $R(\beta)$:
+$$
+R(\alpha)R(\beta)=R(\alpha+\beta).
+$$
 
-$$R(\alpha)R(\beta) = \begin{pmatrix} \cos\alpha & -\sin\alpha \\ \sin\alpha & \cos\alpha \\ \end{pmatrix} \begin{pmatrix} \cos\beta & -\sin\beta \\ \sin\beta & \cos\beta \\ \end{pmatrix}$$
+Explain the result geometrically.
 
-Performing entry-by-entry matrix multiplication:
+**Solution**
 
-$$R(\alpha)R(\beta) = \begin{pmatrix} \cos\alpha\cos\beta - \sin\alpha\sin\beta & -\cos\alpha\sin\beta - \sin\alpha\cos\beta \\ \sin\alpha\cos\beta + \cos\alpha\sin\beta & -\sin\alpha\sin\beta + \cos\alpha\cos\beta \\ \end{pmatrix}$$
+**Part 1: Computing the Product $R(\alpha)R(\beta)$**
 
-Factoring out the negative sign in the top-right entry:
+Multiply the two rotation matrices:
 
-$$R(\alpha)R(\beta) = \begin{pmatrix} \cos\alpha\cos\beta - \sin\alpha\sin\beta & -(\sin\alpha\cos\beta + \cos\alpha\sin\beta) \\ \sin\alpha\cos\beta + \cos\alpha\sin\beta & \cos\alpha\cos\beta - \sin\alpha\sin\beta \\ \end{pmatrix}$$
+$$
+R(\alpha)R(\beta) =
+\begin{pmatrix}
+\cos\alpha & -\sin\alpha \\
+\sin\alpha & \cos\alpha
+\end{pmatrix}
+\begin{pmatrix}
+\cos\beta & -\sin\beta \\
+\sin\beta & \cos\beta
+\end{pmatrix}
+$$
 
----
+Computing each entry of the resulting product matrix using standard matrix multiplication:
 
-#### 2. Verification using Trigonometric Angle-Sum Formulas
+- Top-left entry:
 
-Recall the standard angle-sum trigonometric identities:
-* $\cos(\alpha+\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$
-* $\sin(\alpha+\beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta$
+$$
+(\cos\alpha)(\cos\beta) + (-\sin\alpha)(\sin\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta
+$$
 
-Substituting these identities directly into the matrix product gives:
+- Top-right entry:
 
-$$R(\alpha)R(\beta) = \begin{pmatrix} \cos(\alpha+\beta) & -\sin(\alpha+\beta) \\ \sin(\alpha+\beta) & \cos(\alpha+\beta) \\ \end{pmatrix} = R(\alpha+\beta)$$
+$$
+(\cos\alpha)(-\sin\beta) + (-\sin\alpha)(\cos\beta) = -(\cos\alpha\sin\beta + \sin\alpha\cos\beta)
+$$
 
-Thus, we have shown that $R(\alpha)R(\beta) = R(\alpha+\beta)$.
+- Bottom-left entry:
 
----
+$$
+(\sin\alpha)(\cos\beta) + (\cos\alpha)(\sin\beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta
+$$
 
-####
+- Bottom-right entry:
+
+$$
+(\sin\alpha)(-\sin\beta) + (\cos\alpha)(\cos\beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta
+$$
+
+Combining these entries into the product matrix:
+
+$$
+R(\alpha)R(\beta) =
+\begin{pmatrix}
+\cos\alpha\cos\beta - \sin\alpha\sin\beta & -(\sin\alpha\cos\beta + \cos\alpha\sin\beta) \\
+\sin\alpha\cos\beta + \cos\alpha\sin\beta & \cos\alpha\cos\beta - \sin\alpha\sin\beta
+\end{pmatrix}
+$$
+
+**Part 2: Applying Angle-Sum Formulas**
+
+Recall the trigonometric angle-sum identities:
+- $\cos(\alpha + \beta) = \cos\alpha\cos\beta - \sin\alpha\sin\beta$
+- $\sin(\alpha + \beta) = \sin\alpha\cos\beta + \cos\alpha\sin\beta$
+
+Substituting these identities into the entries of our matrix:
+
+$$
+R(\alpha)R(\beta) =
+\begin{pmatrix}
+\cos(\alpha+\beta) & -\sin(\alpha+\beta) \\
+\sin(\alpha+\beta) & \cos(\alpha+\beta)
+\end{pmatrix}
+$$
+
+By definition, this is precisely the rotation matrix for the combined angle $\alpha + \beta$:
+
+$$
+R(\alpha)R(\beta) = R(\alpha+\beta)
+$$
+
+**Part 3: Geometric Explanation**
+
+Geometrically, multiplying the rotation matrix $R(\beta)$ by $R(\alpha)$ represents performing two successive rotations about the origin:
+1. First, rotating a vector by an angle $\beta$.
+2. Second, rotating the resulting vector by an angle $\alpha$.
+
+Composing a rotation of angle $\beta$ followed by a rotation of angle $\alpha$ is equivalent to performing a single rotation by the total accumulated angle $\alpha + \beta$. Thus, matrix multiplication accurately reflects the composition of geometric rotations.
