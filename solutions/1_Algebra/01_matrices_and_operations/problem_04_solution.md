@@ -8,13 +8,17 @@ $$
 A=
 \begin{pmatrix}
 1 & 2 \\
-0 & 1 \\
+0 & 1
 \end{pmatrix}
-\qquad
+$$
+
+and
+
+$$
 B=
 \begin{pmatrix}
 2 & 0 \\
-3 & 1 \\
+3 & 1
 \end{pmatrix}
 $$
 
@@ -30,21 +34,27 @@ $$
 AB =
 \begin{pmatrix}
 1 & 2 \\
-0 & 1 \\
+0 & 1
 \end{pmatrix}
 \begin{pmatrix}
 2 & 0 \\
-3 & 1 \\
+3 & 1
 \end{pmatrix}
-=
+$$
+
+$$
+AB =
 \begin{pmatrix}
 1(2) + 2(3) & 1(0) + 2(1) \\
-0(2) + 1(3) & 0(0) + 1(1) \\
+0(2) + 1(3) & 0(0) + 1(1)
 \end{pmatrix}
-=
+$$
+
+$$
+AB =
 \begin{pmatrix}
 8 & 2 \\
-3 & 1 \\
+3 & 1
 \end{pmatrix}
 $$
 
@@ -54,21 +64,27 @@ $$
 BA =
 \begin{pmatrix}
 2 & 0 \\
-3 & 1 \\
+3 & 1
 \end{pmatrix}
 \begin{pmatrix}
 1 & 2 \\
-0 & 1 \\
+0 & 1
 \end{pmatrix}
-=
+$$
+
+$$
+BA =
 \begin{pmatrix}
 2(1) + 0(0) & 2(2) + 0(1) \\
-3(1) + 1(0) & 3(2) + 1(1) \\
+3(1) + 1(0) & 3(2) + 1(1)
 \end{pmatrix}
-=
+$$
+
+$$
+BA =
 \begin{pmatrix}
 2 & 4 \\
-3 & 7 \\
+3 & 7
 \end{pmatrix}
 $$
 
@@ -80,13 +96,13 @@ $$
 AB =
 \begin{pmatrix}
 8 & 2 \\
-3 & 1 \\
+3 & 1
 \end{pmatrix}
 \quad \neq \quad
 BA =
 \begin{pmatrix}
 2 & 4 \\
-3 & 7 \\
+3 & 7
 \end{pmatrix}
 $$
 
