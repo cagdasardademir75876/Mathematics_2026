@@ -1,3 +1,4 @@
+
 ### Exercise 15. Combining Determinant Properties
 
 **Problem**
@@ -5,13 +6,13 @@
 Let $A$ and $B$ be invertible $2\times2$ matrices with
 
 $$
-\det(A)=-2,\qquad \det(B)=3.
+\det A=-2,\qquad \det B=3.
 $$
 
 Without finding the entries of the matrices, compute
 
 $$
-\det\left(B^{-1}A^TB\right).
+\det(B^{-1}A^TB).
 $$
 
 State the determinant properties you use in order and explain why the factors involving $B$ eventually cancel.
@@ -22,19 +23,19 @@ State the determinant properties you use in order and explain why the factors in
 
 **1. Given Information**
 
-We are given that $A$ and $B$ are invertible $2\times2$ matrices and
+We are given that $A$ and $B$ are invertible $2\times2$ matrices.
+
+Their determinants are
 
 $$
-\det(A)=-2,\qquad \det(B)=3.
+\det A=-2,\qquad \det B=3.
 $$
 
 We need to calculate
 
 $$
-\det\left(B^{-1}A^TB\right).
+\det(B^{-1}A^TB).
 $$
-
-We can solve this problem using determinant properties without finding the individual matrix entries.
 
 **2. Applying the Product Property**
 
@@ -50,16 +51,16 @@ $$
 
 **3. Applying the Inverse and Transpose Properties**
 
-The determinant of an inverse matrix is the reciprocal of the original determinant:
+The determinant of an inverse matrix is the reciprocal of the determinant of the original matrix:
 
 $$
-\det(B^{-1})=\frac{1}{\det(B)}
+\det(B^{-1})=\frac{1}{\det B}
 $$
 
 The determinant of a transpose is equal to the determinant of the original matrix:
 
 $$
-\det(A^T)=\det(A)
+\det(A^T)=\det A
 $$
 
 Substituting these properties gives
@@ -67,20 +68,12 @@ Substituting these properties gives
 $$
 \det(B^{-1}A^TB)
 =
-\det(B^{-1})\det(A^T)\det(B)
-$$
-
-Therefore,
-
-$$
-\det(B^{-1}A^TB)
-=
-\frac{1}{\det(B)}\det(A)\det(B)
+\frac{1}{\det B}\det A\det B
 $$
 
 **4. Simplifying the Expression**
 
-Since $\det(B)=3$ and $\det(A)=-2$, we obtain
+Since $\det A=-2$ and $\det B=3$, we obtain
 
 $$
 \det(B^{-1}A^TB)
@@ -91,7 +84,7 @@ $$
 The factors involving $B$ cancel because
 
 $$
-\frac{1}{\det(B)}\cdot\det(B)=1
+\frac{1}{3}\cdot3=1
 $$
 
 Therefore,
@@ -106,12 +99,12 @@ The matrix $B$ is invertible, so its determinant is nonzero.
 
 The determinant of $B^{-1}$ is the reciprocal of the determinant of $B$. When these two determinants are multiplied, their product is equal to $1$.
 
-The transpose does not change the determinant of $A$.
+Also, taking the transpose of a matrix does not change its determinant.
 
-As a result, the final determinant depends only on $\det(A)$.
+Consequently, the factors involving $B$ cancel, and the final result depends only on the determinant of $A$.
 
 **Final Answer**
 
 $$
-\boxed{\det(B^{-1}A^TB)=-2}
+\det(B^{-1}A^TB)=-2
 $$
