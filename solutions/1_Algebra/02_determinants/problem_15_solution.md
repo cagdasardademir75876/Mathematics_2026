@@ -1,3 +1,4 @@
+
 ### Exercise 15. Combining Determinant Properties
 
 **Problem**
@@ -67,6 +68,14 @@ Substituting these properties gives
 $$
 \det(B^{-1}A^TB)
 =
+\det(B^{-1})\det(A^T)\det(B)
+$$
+
+Therefore,
+
+$$
+\det(B^{-1}A^TB)
+=
 \frac{1}{\det(B)}\det(A)\det(B)
 $$
 
@@ -96,15 +105,7 @@ $$
 
 The matrix $B$ is invertible, so its determinant is nonzero.
 
-The inverse matrix $B^{-1}$ has a determinant equal to the reciprocal of $\det(B)$.
-
-When we calculate the determinant of $B^{-1}A^TB$, the determinant of $B^{-1}$ multiplies the determinant of $B$.
-
-These two factors cancel each other:
-
-$$
-\det(B^{-1})\det(B)=1
-$$
+The determinant of $B^{-1}$ is the reciprocal of the determinant of $B$. When these two determinants are multiplied, their product is equal to $1$.
 
 The transpose does not change the determinant of $A$.
 
@@ -113,7 +114,5 @@ As a result, the final determinant depends only on $\det(A)$.
 **Final Answer**
 
 $$
-\det(B^{-1}A^TB)=-2
+\boxed{\det(B^{-1}A^TB)=-2}
 $$
-
-The factors involving $B$ cancel because the determinant of an inverse is the reciprocal of the determinant of the original matrix. The transpose preserves the determinant, so the final result is equal to $\det(A)$.
