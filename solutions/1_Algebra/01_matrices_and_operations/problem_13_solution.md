@@ -181,12 +181,8 @@ $$
 Compute the product of $F$ with an arbitrary vector $\begin{pmatrix} a \\ b \end{pmatrix}$:
 
 $$
-F
-\begin{pmatrix}
-a \\
-b
-\end{pmatrix}
-=
+\begin{aligned}
+F \begin{pmatrix} a \\ b \end{pmatrix} &=
 \begin{pmatrix}
 1 & 1 \\
 1 & 0
@@ -194,33 +190,18 @@ b
 \begin{pmatrix}
 a \\
 b
-\end{pmatrix}
-$$
-
-$$
-F
-\begin{pmatrix}
-a \\
-b
-\end{pmatrix}
-=
+\end{pmatrix} \\
+&=
 \begin{pmatrix}
 1(a) + 1(b) \\
 1(a) + 0(b)
-\end{pmatrix}
-$$
-
-$$
-F
-\begin{pmatrix}
-a \\
-b
-\end{pmatrix}
-=
+\end{pmatrix} \\
+&=
 \begin{pmatrix}
 a + b \\
 a
 \end{pmatrix}
+\end{aligned}
 $$
 
 **Explanation of the Recurrence Step:**
