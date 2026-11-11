@@ -1,48 +1,131 @@
 ### Exercise 11. When Do Matrices Commute?
 
+**Problem**
+
 Given
 
-$$A=\begin{pmatrix} 1 & 1 \\ 0 & 1 \\ \end{pmatrix},\qquad B=\begin{pmatrix} a & b \\ c & d \\ \end{pmatrix}$$
+$$
+A=
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+$$
 
----
+and
 
-#### 1. Computations of $AB$ and $BA$
+$$
+B=
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+$$
 
-**Computation of $AB$:**
+Find the conditions on $a,b,c,d$ under which $AB=BA$. Describe the general form of all such matrices $B$.
 
-$$AB = \begin{pmatrix} 1 & 1 \\ 0 & 1 \\ \end{pmatrix} \begin{pmatrix} a & b \\ c & d \\ \end{pmatrix}$$
+**Solution**
 
-$$AB = \begin{pmatrix} 1(a) + 1(c) & 1(b) + 1(d) \\ 0(a) + 1(c) & 0(b) + 1(d) \\ \end{pmatrix} = \begin{pmatrix} a+c & b+d \\ c & d \\ \end{pmatrix}$$
+**Part 1: Computing $AB$ and $BA$**
 
-**Computation of $BA$:**
+- Compute the product $AB$:
 
-$$BA = \begin{pmatrix} a & b \\ c & d \\ \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 0 & 1 \\ \end{pmatrix}$$
+$$
+AB =
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+$$
 
-$$BA = \begin{pmatrix} a(1) + b(0) & a(1) + b(1) \\ c(1) + d(0) & c(1) + d(1) \\ \end{pmatrix} = \begin{pmatrix} a & a+b \\ c & c+d \\ \end{pmatrix}$$
+$$
+AB =
+\begin{pmatrix}
+1(a) + 1(c) & 1(b) + 1(d) \\
+0(a) + 1(c) & 0(b) + 1(d)
+\end{pmatrix}
+$$
 
----
+$$
+AB =
+\begin{pmatrix}
+a + c & b + d \\
+c & d
+\end{pmatrix}
+$$
 
-#### 2. Deriving Conditions for $AB = BA$
+- Compute the product $BA$:
 
-For $AB$ to equal $BA$, their corresponding entries must be equal:
+$$
+BA =
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 \\
+0 & 1
+\end{pmatrix}
+$$
 
-1. **Top-left entry:** $a+c = a \implies c = 0$
-2. **Top-right entry:** $b+d = a+b \implies d = a$
-3. **Bottom-left entry:** $c = c$ (always true)
-4. **Bottom-right entry:** $d = c+d \implies c = 0$
+$$
+BA =
+\begin{pmatrix}
+a(1) + b(0) & a(1) + b(1) \\
+c(1) + d(0) & c(1) + d(1)
+\end{pmatrix}
+$$
 
-Thus, the required conditions on $a, b, c, d$ are:
+$$
+BA =
+\begin{pmatrix}
+a & a + b \\
+c & c + d
+\end{pmatrix}
+$$
 
-$$c = 0 \qquad \text{and} \qquad d = a$$
+**Part 2: Finding the Conditions for $AB = BA$**
 
----
+Equating the corresponding entries of $AB$ and $BA$:
 
-#### 3. General Form of Matrix $B$
+$$
+\begin{pmatrix}
+a + c & b + d \\
+c & d
+\end{pmatrix}
+=
+\begin{pmatrix}
+a & a + b \\
+c & c + d
+\end{pmatrix}
+$$
 
-Substituting $c = 0$ and $d = a$ into matrix $B$ gives its general form:
+This gives the following system of equations for the entries:
+1. $a + c = a \implies c = 0$
+2. $b + d = a + b \implies d = a$
+3. $c = c$ (trivially satisfied since $c = 0$)
+4. $d = c + d \implies c = 0$ (consistent with the first condition)
 
-$$B = \begin{pmatrix} a & b \\ 0 & a \\ \end{pmatrix}$$
+Thus, the conditions for $AB = commutator$ to hold are:
+- $c = 0$
+- $d = a$
+- $a$ and $b$ can be any arbitrary real numbers.
 
-where $a$ and $b$ can be any real numbers. 
+**Part 3: General Form of Matrix $B$**
 
-Therefore, any matrix that commutes with $A$ must have equal diagonal entries ($a$) and a zero in the lower-left entry ($c = 0$), while the upper-right entry ($b$) can take any arbitrary value.
+Substituting these conditions back into matrix $B$:
+
+$$
+B =
+\begin{pmatrix}
+a & b \\
+0 & a
+\end{pmatrix}
+$$
+
+**Conclusion:** 
+All matrices $B$ that commute with $A$ must have upper-triangular form where the diagonal entries are equal ($a = d$) and the bottom-left entry is zero ($c = 0$).
