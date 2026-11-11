@@ -8,13 +8,17 @@ $$
 A=
 \begin{pmatrix}
 2 & -1 \\
-1 & 3 \\
+1 & 3
 \end{pmatrix}
-\qquad
+$$
+
+and
+
+$$
 x=
 \begin{pmatrix}
 4 \\
-2 \\
+2
 \end{pmatrix}
 $$
 
@@ -30,26 +34,35 @@ $$
 Ax =
 \begin{pmatrix}
 2 & -1 \\
-1 & 3 \\
+1 & 3
 \end{pmatrix}
 \begin{pmatrix}
 4 \\
-2 \\
+2
 \end{pmatrix}
-=
+$$
+
+$$
+Ax =
 \begin{pmatrix}
 2(4) + (-1)(2) \\
-1(4) + 3(2) \\
+1(4) + 3(2)
 \end{pmatrix}
-=
+$$
+
+$$
+Ax =
 \begin{pmatrix}
 8 - 2 \\
-4 + 6 \\
+4 + 6
 \end{pmatrix}
-=
+$$
+
+$$
+Ax =
 \begin{pmatrix}
 6 \\
-10 \\
+10
 \end{pmatrix}
 $$
 
@@ -63,13 +76,13 @@ $$
 c_1 = 
 \begin{pmatrix}
 2 \\
-1 \\
+1
 \end{pmatrix}
 \qquad
 c_2 = 
 \begin{pmatrix}
 -1 \\
-3 \\
+3
 \end{pmatrix}
 $$
 
@@ -85,28 +98,34 @@ $$
 Ax = 4
 \begin{pmatrix}
 2 \\
-1 \\
+1
 \end{pmatrix}
 +
 2
 \begin{pmatrix}
 -1 \\
-3 \\
+3
 \end{pmatrix}
-=
+$$
+
+$$
+Ax =
 \begin{pmatrix}
 8 \\
-4 \\
+4
 \end{pmatrix}
 +
 \begin{pmatrix}
 -2 \\
-6 \\
+6
 \end{pmatrix}
-=
+$$
+
+$$
+Ax =
 \begin{pmatrix}
 6 \\
-10 \\
+10
 \end{pmatrix}
 $$
 
