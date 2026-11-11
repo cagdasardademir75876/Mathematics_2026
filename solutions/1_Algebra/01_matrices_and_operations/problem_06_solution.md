@@ -1,55 +1,64 @@
 ### Exercise 6. Transpose
 
-Given
+**Problem**
+
+For
 
 $$
-A=\begin{pmatrix}
+A=
+\begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6 \\
 \end{pmatrix}
-$$
-
-and
-
-$$
-B=\begin{pmatrix}
+\qquad
+B=
+\begin{pmatrix}
 1 & 0 \\
 2 & 1 \\
 -1 & 3 \\
 \end{pmatrix}
 $$
 
----
-
-#### 1. Transposes of Matrices $A$ and $B$
-
-**Computation of $A^T$:**
+compute $A^T$, $B^T$, and $AB$. Then verify in this example that
 
 $$
-A^T = \begin{pmatrix}
+(AB)^T=B^TA^T.
+$$
+
+**Solution**
+
+**Part 1: Computing Transposes $A^T$ and $B^T$**
+
+The transpose of a matrix is obtained by swapping its rows and columns.
+
+- For matrix $A$ (size $2 \times 3$), its transpose $A^T$ has size $3 \times 2$:
+
+$$
+A^T =
+\begin{pmatrix}
 1 & 4 \\
 2 & 5 \\
 3 & 6 \\
 \end{pmatrix}
 $$
 
-**Computation of $B^T$:**
+- For matrix $B$ (size $3 \times 2$), its transpose $B^T$ has size $2 \times 3$:
 
 $$
-B^T = \begin{pmatrix}
+B^T =
+\begin{pmatrix}
 1 & 2 & -1 \\
 0 & 1 & 3 \\
 \end{pmatrix}
 $$
 
----
+**Part 2: Computing the Product $AB$**
 
-#### 2. Computation of $AB$ and Its Transpose
-
-**Computation of $AB$:**
+The matrix $A$ has size $2 \times 3$ and $B$ has size $3 \times 2$, so their product $AB$ is defined and results in a $2 \times 2$ matrix:
 
 $$
-AB = \begin{pmatrix}
+AB =
+\begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6 \\
 \end{pmatrix}
@@ -60,34 +69,48 @@ AB = \begin{pmatrix}
 \end{pmatrix}
 $$
 
+Calculating the entries:
+
 $$
-AB = \begin{pmatrix}
+AB =
+\begin{pmatrix}
 1(1) + 2(2) + 3(-1) & 1(0) + 2(1) + 3(3) \\
 4(1) + 5(2) + 6(-1) & 4(0) + 5(1) + 6(3) \\
 \end{pmatrix}
-= \begin{pmatrix}
+=
+\begin{pmatrix}
+1 + 4 - 3 & 0 + 2 + 9 \\
+4 + 10 - 6 & 0 + 5 + 18 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
 2 & 11 \\
 8 & 23 \\
 \end{pmatrix}
 $$
 
-**Computation of $(AB)^T$:**
+**Part 3: Verifying $(AB)^T = B^TA^T$**
+
+- First, compute the left-hand side, $(AB)^T$, by transposing the product $AB$:
 
 $$
-(AB)^T = \begin{pmatrix}
+(AB)^T =
+\begin{pmatrix}
+2 & 11 \\
+8 & 23 \\
+\end{pmatrix}^T
+=
+\begin{pmatrix}
 2 & 8 \\
 11 & 23 \\
 \end{pmatrix}
 $$
 
----
-
-#### 3. Computation of $B^TA^T$ and Verification
-
-**Computation of $B^TA^T$:**
+- Next, compute the right-hand side, $B^TA^T$. The matrix $B^T$ has size $2 \times 3$ and $A^T$ has size $3 \times 2$, so their product is defined and results in a $2 \times 2$ matrix:
 
 $$
-B^TA^T = \begin{pmatrix}
+B^TA^T =
+\begin{pmatrix}
 1 & 2 & -1 \\
 0 & 1 & 3 \\
 \end{pmatrix}
@@ -98,27 +121,47 @@ B^TA^T = \begin{pmatrix}
 \end{pmatrix}
 $$
 
+Calculating the entries:
+
 $$
-B^TA^T = \begin{pmatrix}
+B^TA^T =
+\begin{pmatrix}
 1(1) + 2(2) + (-1)(3) & 1(4) + 2(5) + (-1)(6) \\
 0(1) + 1(2) + 3(3) & 0(4) + 1(5) + 3(6) \\
 \end{pmatrix}
-= \begin{pmatrix}
+$$
+
+Simplifying each entry:
+
+$$
+B^TA^T =
+\begin{pmatrix}
+1 + 4 - 3 & 4 + 10 - 6 \\
+0 + 2 + 9 & 0 + 5 + 18 \\
+\end{pmatrix}
+=
+\begin{pmatrix}
 2 & 8 \\
 11 & 23 \\
 \end{pmatrix}
 $$
 
-**Verification:**
-
-Comparing the results from the previous steps, we find that:
+Comparing both sides:
 
 $$
-(AB)^T = \begin{pmatrix}
+(AB)^T =
+\begin{pmatrix}
 2 & 8 \\
 11 & 23 \\
 \end{pmatrix}
-= B^TA^T
+\qquad
+\text{and}
+\qquad
+B^TA^T =
+\begin{pmatrix}
+2 & 8 \\
+11 & 23 \\
+\end{pmatrix}
 $$
 
-Thus, the property $(AB)^T = B^TA^T$ is successfully verified for this example.
+Thus, $(AB)^T = B^TA^T$ is successfully verified for this example.
