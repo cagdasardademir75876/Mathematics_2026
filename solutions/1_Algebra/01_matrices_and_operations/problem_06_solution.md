@@ -10,7 +10,11 @@ A=
 1 & 2 & 3 \\
 4 & 5 & 6 \\
 \end{pmatrix}
-\qquad
+$$
+
+and
+
+$$
 B=
 \begin{pmatrix}
 1 & 0 \\
@@ -31,7 +35,7 @@ $$
 
 The transpose of a matrix is obtained by swapping its rows and columns.
 
-- For matrix $A$ (size $2 \times 3$), its transpose $A^T$ has size $3 \times 2$:
+- For matrix $A$, its transpose $A^T$ is:
 
 $$
 A^T =
@@ -42,7 +46,7 @@ A^T =
 \end{pmatrix}
 $$
 
-- For matrix $B$ (size $3 \times 2$), its transpose $B^T$ has size $2 \times 3$:
+- For matrix $B$, its transpose $B^T$ is:
 
 $$
 B^T =
@@ -54,7 +58,7 @@ $$
 
 **Part 2: Computing the Product $AB$**
 
-The matrix $A$ has size $2 \times 3$ and $B$ has size $3 \times 2$, so their product $AB$ is defined and results in a $2 \times 2$ matrix:
+Multiply matrix $A$ by matrix $B$:
 
 $$
 AB =
@@ -69,7 +73,7 @@ AB =
 \end{pmatrix}
 $$
 
-Calculating the entries:
+Calculating the entries step-by-step:
 
 $$
 AB =
@@ -77,12 +81,22 @@ AB =
 1(1) + 2(2) + 3(-1) & 1(0) + 2(1) + 3(3) \\
 4(1) + 5(2) + 6(-1) & 4(0) + 5(1) + 6(3) \\
 \end{pmatrix}
-=
+$$
+
+Simplifying the entries:
+
+$$
+AB =
 \begin{pmatrix}
 1 + 4 - 3 & 0 + 2 + 9 \\
 4 + 10 - 6 & 0 + 5 + 18 \\
 \end{pmatrix}
-=
+$$
+
+Final product matrix $AB$:
+
+$$
+AB =
 \begin{pmatrix}
 2 & 11 \\
 8 & 23 \\
@@ -91,7 +105,7 @@ $$
 
 **Part 3: Verifying $(AB)^T = B^TA^T$**
 
-- First, compute the left-hand side, $(AB)^T$, by transposing the product $AB$:
+- Left-hand side, $(AB)^T$:
 
 $$
 (AB)^T =
@@ -106,7 +120,7 @@ $$
 \end{pmatrix}
 $$
 
-- Next, compute the right-hand side, $B^TA^T$. The matrix $B^T$ has size $2 \times 3$ and $A^T$ has size $3 \times 2$, so their product is defined and results in a $2 \times 2$ matrix:
+- Right-hand side, $B^TA^T$:
 
 $$
 B^TA^T =
@@ -121,7 +135,7 @@ B^TA^T =
 \end{pmatrix}
 $$
 
-Calculating the entries:
+Calculating the product entries:
 
 $$
 B^TA^T =
@@ -131,7 +145,7 @@ B^TA^T =
 \end{pmatrix}
 $$
 
-Simplifying each entry:
+Simplifying the entries:
 
 $$
 B^TA^T =
@@ -139,24 +153,11 @@ B^TA^T =
 1 + 4 - 3 & 4 + 10 - 6 \\
 0 + 2 + 9 & 0 + 5 + 18 \\
 \end{pmatrix}
-=
-\begin{pmatrix}
-2 & 8 \\
-11 & 23 \\
-\end{pmatrix}
 $$
 
-Comparing both sides:
+Final matrix $B^TA^T$:
 
 $$
-(AB)^T =
-\begin{pmatrix}
-2 & 8 \\
-11 & 23 \\
-\end{pmatrix}
-\qquad
-\text{and}
-\qquad
 B^TA^T =
 \begin{pmatrix}
 2 & 8 \\
@@ -164,4 +165,4 @@ B^TA^T =
 \end{pmatrix}
 $$
 
-Thus, $(AB)^T = B^TA^T$ is successfully verified for this example.
+Since both sides yield the exact same matrix, $(AB)^T = B^TA^T$ is verified.
