@@ -64,7 +64,10 @@ Ab_1 =
 -1 \\
 3
 \end{pmatrix}
-=
+$$
+
+$$
+Ab_1 =
 \begin{pmatrix}
 1(1) + 2(-1) + 0(3) \\
 0(1) + 1(-1) + 1(3)
@@ -77,7 +80,10 @@ Ab_1 =
 1 - 2 + 0 \\
 0 - 1 + 3
 \end{pmatrix}
-=
+$$
+
+$$
+Ab_1 =
 \begin{pmatrix}
 -1 \\
 2
@@ -97,7 +103,10 @@ Ab_2 =
 0 \\
 1
 \end{pmatrix}
-=
+$$
+
+$$
+Ab_2 =
 \begin{pmatrix}
 1(2) + 2(0) + 0(1) \\
 0(2) + 1(0) + 1(1)
@@ -110,7 +119,10 @@ Ab_2 =
 2 + 0 + 0 \\
 0 + 0 + 1
 \end{pmatrix}
-=
+$$
+
+$$
+Ab_2 =
 \begin{pmatrix}
 2 \\
 1
@@ -152,7 +164,12 @@ AB =
 1 - 2 + 0 & 2 + 0 + 0 \\
 0 - 1 + 3 & 0 + 0 + 1
 \end{pmatrix}
-=
+$$
+
+Final product matrix $AB$:
+
+$$
+AB =
 \begin{pmatrix}
 -1 & 2 \\
 2 & 1
@@ -169,12 +186,9 @@ AB =
 -1 & 2 \\
 2 & 1
 \end{pmatrix}
-\qquad
-\text{where the columns are }
-Ab_1 = \begin{pmatrix} -1 \\ 2 \end{pmatrix}
-\text{ and }
-Ab_2 = \begin{pmatrix} 2 \\ 1 \end{pmatrix}
 $$
+
+Here, the columns of $AB$ are precisely $\begin{pmatrix} -1 \\ 2 \end{pmatrix}$ and $\begin{pmatrix} 2 \\ 1 \end{pmatrix}$, which match $Ab_1$ and $Ab_2$ respectively.
 
 **Why the columns of $AB$ are $Ab_1$ and $Ab_2$:**
 
