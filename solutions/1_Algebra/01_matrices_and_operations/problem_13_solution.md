@@ -1,57 +1,230 @@
 ### Exercise 13. A Recurrence Written in Matrix Form
 
-Given
+**Problem**
 
-$$F=\begin{pmatrix} 1 & 1 \\ 1 & 0 \\ \end{pmatrix}$$
+Let
 
----
+$$
+F=
+\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
 
-#### 1. Computations of Matrix Powers
+Compute $F^2$, $F^3$, $F^4$, and $F^5$. Compare the numbers obtained with the sequence
 
-**Computation of $F^2$:**
+$$
+0, 1, 1, 2, 3, 5, 8, \ldots
+$$
 
-$$F^2 = F \cdot F = \begin{pmatrix} 1 & 1 \\ 1 & 0 \\ \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 1 & 0 \\ \end{pmatrix} = \begin{pmatrix} 1(1) + 1(1) & 1(1) + 1(0) \\ 1(1) + 0(1) & 1(1) + 0(0) \\ \end{pmatrix} = \begin{pmatrix} 2 & 1 \\ 1 & 1 \\ \end{pmatrix}$$
+and describe the relationship you observe. Then compute
 
-**Computation of $F^3$:**
+$$
+F
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix}
+$$
 
-$$F^3 = F^2 \cdot F = \begin{pmatrix} 2 & 1 \\ 1 & 1 \\ \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 1 & 0 \\ \end{pmatrix} = \begin{pmatrix} 2(1) + 1(1) & 2(1) + 1(0) \\ 1(1) + 1(1) & 1(1) + 1(0) \\ \end{pmatrix} = \begin{pmatrix} 3 & 2 \\ 2 & 1 \\ \end{pmatrix}$$
+and explain how this multiplication performs one recurrence step: it creates the sum of two consecutive terms and keeps one of them for the next step.
 
-**Computation of $F^4$:**
+**Solution**
 
-$$F^4 = F^3 \cdot F = \begin{pmatrix} 3 & 2 \\ 2 & 1 \\ \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 1 & 0 \\ \end{pmatrix} = \begin{pmatrix} 3(1) + 2(1) & 3(1) + 2(0) \\ 2(1) + 1(1) & 2(1) + 1(0) \\ \end{pmatrix} = \begin{pmatrix} 5 & 3 \\ 3 & 2 \\ \end{pmatrix}$$
+**Part 1: Computing Powers $F^2$, $F^3$, $F^4$, and $F^5$**
 
-**Computation of $F^5$:**
+- Compute $F^2 = F \cdot F$:
 
-$$F^5 = F^4 \cdot F = \begin{pmatrix} 5 & 3 \\ 3 & 2 \\ \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 1 & 0 \\ \end{pmatrix} = \begin{pmatrix} 5(1) + 3(1) & 5(1) + 3(0) \\ 3(1) + 2(1) & 3(1) + 2(0) \\ \end{pmatrix} = \begin{pmatrix} 8 & 5 \\ 5 & 3 \\ \end{pmatrix}$$
+$$
+F^2 =
+\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
 
----
+$$
+F^2 =
+\begin{pmatrix}
+1(1) + 1(1) & 1(1) + 1(0) \\
+1(1) + 0(1) & 1(1) + 0(0)
+\end{pmatrix}
+$$
 
-#### 2. Relationship with the Fibonacci Sequence
+$$
+F^2 =
+\begin{pmatrix}
+2 & 1 \\
+1 & 1
+\end{pmatrix}
+$$
 
-The given sequence is the Fibonacci sequence $(f_n)_{n \ge 0}$:
+- Compute $F^3 = F^2 \cdot F$:
 
-$$f_0 = 0,\quad f_1 = 1,\quad f_2 = 1,\quad f_3 = 2,\quad f_4 = 3,\quad f_5 = 5,\quad f_6 = 8,\quad \ldots$$
+$$
+F^3 =
+\begin{pmatrix}
+2 & 1 \\
+1 & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
 
-Comparing the entries of the matrix powers with the Fibonacci numbers:
+$$
+F^3 =
+\begin{pmatrix}
+2(1) + 1(1) & 2(1) + 1(0) \\
+1(1) + 1(1) & 1(1) + 1(0)
+\end{pmatrix}
+$$
 
-* $F^1 = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} f_2 & f_1 \\ f_1 & f_0 \end{pmatrix}$
-* $F^2 = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix} = \begin{pmatrix} f_3 & f_2 \\ f_2 & f_1 \end{pmatrix}$
-* $F^3 = \begin{pmatrix} 3 & 2 \\ 2 & 1 \end{pmatrix} = \begin{pmatrix} f_4 & f_3 \\ f_3 & f_2 \end{pmatrix}$
-* $F^4 = \begin{pmatrix} 5 & 3 \\ 3 & 2 \end{pmatrix} = \begin{pmatrix} f_5 & f_4 \\ f_4 & f_3 \end{pmatrix}$
-* $F^5 = \begin{pmatrix} 8 & 5 \\ 5 & 3 \end{pmatrix} = \begin{pmatrix} f_6 & f_5 \\ f_5 & f_4 \end{pmatrix}$
+$$
+F^3 =
+\begin{pmatrix}
+3 & 2 \\
+2 & 1
+\end{pmatrix}
+$$
 
-**Observation:**
-For any positive integer $n \ge 1$, the power $F^n$ contains consecutive terms of the Fibonacci sequence:
+- Compute $F^4 = F^3 \cdot F$:
 
-$$F^n = \begin{pmatrix} f_{n+1} & f_n \\ f_n & f_{n-1} \\ \end{pmatrix}$$
+$$
+F^4 =
+\begin{pmatrix}
+3 & 2 \\
+2 & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
 
----
+$$
+F^4 =
+\begin{pmatrix}
+3(1) + 2(1) & 3(1) + 2(0) \\
+2(1) + 1(1) & 2(1) + 1(0)
+\end{pmatrix}
+$$
 
-#### 3. Recurrence Step Interpretation
+$$
+F^4 =
+\begin{pmatrix}
+5 & 3 \\
+3 & 2
+\end{pmatrix}
+$$
 
-**Computation:**
+- Compute $F^5 = F^4 \cdot F$:
 
-$$F\begin{pmatrix} a \\ b \end{pmatrix} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} \begin{pmatrix} a \\ b \end{pmatrix} = \begin{pmatrix} 1(a) + 1(b) \\ 1(a) + 0(b) \end{pmatrix} = \begin{pmatrix} a+b \\ a \end{pmatrix}$$
+$$
+F^5 =
+\begin{pmatrix}
+5 & 3 \\
+3 & 2
+\end{pmatrix}
+\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
 
-**Explanation:**
-If $\begin{pmatrix} a \\ b \end{pmatrix}$ holds two consecutive terms of a sequence, say $\begin{pmatrix} f_k \\ f_{k-1} \end{pmatrix}$, multiplying by $F$ yields
+$$
+F^5 =
+\begin{pmatrix}
+5(1) + 3(1) & 5(1) + 3(0) \\
+3(1) + 2(1) & 3(1) + 2(0)
+\end{pmatrix}
+$$
+
+$$
+F^5 =
+\begin{pmatrix}
+8 & 5 \\
+5 & 3
+\end{pmatrix}
+$$
+
+**Part 2: Relationship with the Fibonacci Sequence**
+
+Comparing the entries of the computed matrix powers with the given sequence $0, 1, 1, 2, 3, 5, 8, \ldots$ (which is the Fibonacci sequence $F_n$):
+
+$$
+F^1 = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}, \quad
+F^2 = \begin{pmatrix} 2 & 1 \\ 1 & 1 \end{pmatrix}, \quad
+F^3 = \begin{pmatrix} 3 & 2 \\ 2 & 1 \end{pmatrix}, \quad
+F^4 = \begin{pmatrix} 5 & 3 \\ 3 & 2 \end{pmatrix}, \quad
+F^5 = \begin{pmatrix} 8 & 5 \\ 5 & 3 \end{pmatrix}
+$$
+
+In general, the power $F^n$ contains consecutive Fibonacci numbers:
+
+$$
+F^n =
+\begin{pmatrix}
+F_{n+1} & F_n \\
+F_n & F_{n-1}
+\end{pmatrix}
+$$
+
+**Part 3: Matrix-Vector Product and Recurrence Step**
+
+Compute the product of $F$ with an arbitrary vector $\begin{pmatrix} a \\ b \end{pmatrix}$:
+
+$$
+F
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 1 \\
+1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix}
+$$
+
+$$
+F
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix}
+=
+\begin{pmatrix}
+1(a) + 1(b) \\
+1(a) + 0(b)
+\end{pmatrix}
+$$
+
+$$
+F
+\begin{pmatrix}
+a \\
+b
+\end{pmatrix}
+=
+\begin{pmatrix}
+a + b \\
+a
+\end{pmatrix}
+$$
+
+**Explanation of the Recurrence Step:**
+
+If we view $a$ and $b$ as two consecutive terms in a sequence (where $a$ is the current term and $b$ is the previous term), multiplying by matrix $F$ performs a single recurrence step:
+- The top entry becomes $a + b$, which is the next term in the Fibonacci-like sequence (the sum of the two preceding terms).
+- The bottom entry becomes $a$, which retains the current term so it can serve as the "previous" term in the subsequent step.
