@@ -1,30 +1,34 @@
 ### Exercise 4. Matrix Multiplication and Noncommutativity
 
-Given
+**Problem**
+
+For
+
 $$
-A=\begin{pmatrix}
+A=
+\begin{pmatrix}
 1 & 2 \\
 0 & 1 \\
 \end{pmatrix}
-$$
-
-and
-
-$$
-B=\begin{pmatrix}
+\qquad
+B=
+\begin{pmatrix}
 2 & 0 \\
 3 & 1 \\
 \end{pmatrix}
 $$
 
----
+compute $AB$ and $BA$. Is $AB=BA$? Use this example to explain what noncommutativity of matrix multiplication means.
 
-#### 1. Computations
+**Solution**
 
-**Computation of $AB$:**
+**Part 1: Computing $AB$ and $BA$**
+
+- Compute the product $AB$:
 
 $$
-AB = \begin{pmatrix}
+AB =
+\begin{pmatrix}
 1 & 2 \\
 0 & 1 \\
 \end{pmatrix}
@@ -32,23 +36,23 @@ AB = \begin{pmatrix}
 2 & 0 \\
 3 & 1 \\
 \end{pmatrix}
-$$
-
-$$
-AB = \begin{pmatrix}
+=
+\begin{pmatrix}
 1(2) + 2(3) & 1(0) + 2(1) \\
 0(2) + 1(3) & 0(0) + 1(1) \\
 \end{pmatrix}
-= \begin{pmatrix}
+=
+\begin{pmatrix}
 8 & 2 \\
 3 & 1 \\
 \end{pmatrix}
 $$
 
-**Computation of $BA$:**
+- Compute the product $BA$:
 
 $$
-BA = \begin{pmatrix}
+BA =
+\begin{pmatrix}
 2 & 0 \\
 3 & 1 \\
 \end{pmatrix}
@@ -56,31 +60,40 @@ BA = \begin{pmatrix}
 1 & 2 \\
 0 & 1 \\
 \end{pmatrix}
-$$
-
-$$
-BA = \begin{pmatrix}
+=
+\begin{pmatrix}
 2(1) + 0(0) & 2(2) + 0(1) \\
 3(1) + 1(0) & 3(2) + 1(1) \\
 \end{pmatrix}
-= \begin{pmatrix}
+=
+\begin{pmatrix}
 2 & 4 \\
 3 & 7 \\
 \end{pmatrix}
 $$
 
----
+**Part 2: Comparison ($AB$ versus $BA$)**
 
-#### 2. Analysis of Noncommutativity
-
-Comparing the two results:
+Comparing the resulting matrices:
 
 $$
-AB = \begin{pmatrix} 8 & 2 \\ 3 & 1 \\\end{pmatrix} \neq \begin{pmatrix} 2 & 4 \\ 3 & 7 \\\end{pmatrix} = BA
+AB =
+\begin{pmatrix}
+8 & 2 \\
+3 & 1 \\
+\end{pmatrix}
+\quad \neq \quad
+BA =
+\begin{pmatrix}
+2 & 4 \\
+3 & 7 \\
+\end{pmatrix}
 $$
 
 Therefore, $AB \neq BA$.
 
-In real-number arithmetic, multiplication is commutative, meaning that the order of factors does not change the product ($a \cdot b = b \cdot a$). 
+**Part 3: Explanation of Noncommutativity**
 
-In contrast, matrix multiplication is **noncommutative**. This means that changing the order in which two matrices are multiplied generally produces a different result (or can even render the operation undefined due to incompatible dimensions). Consequently, the left-to-right order of matrices must be strictly preserved during calculations.
+In ordinary arithmetic for real numbers, multiplication is commutative, meaning that $ab = ba$ for any two numbers $a$ and $b$. 
+
+As demonstrated by this example, matrix multiplication does not generally possess this property. The noncommutativity of matrix multiplication means that changing the order of the factors in a matrix product alters the final result. Even when both products $AB$ and $BA$ are well-defined and have the same dimensions, they are not guaranteed to be equal.
