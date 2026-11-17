@@ -54,7 +54,7 @@ $$
 X = A^{-1}B
 $$
 
-*(Note: Multiplying on the right would yield $AXA^{-1} = BA^{-1}$, which does not isolate $X$ because $A$ and $A^{-1}$ are separated by $X$).*
+Note: Multiplying on the right would yield $AXA^{-1} = BA^{-1}$, which does not isolate $X$ because $A$ and $A^{-1}$ are separated by $X$.
 
 **Part 2: Finding $A^{-1}$ and Solving for $X$**
 
@@ -72,7 +72,10 @@ A^{-1} = \frac{1}{1}
 1 & -2 \\
 0 & 1
 \end{pmatrix}
-=
+$$
+
+$$
+A^{-1} =
 \begin{pmatrix}
 1 & -2 \\
 0 & 1
