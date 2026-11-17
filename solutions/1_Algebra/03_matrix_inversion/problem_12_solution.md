@@ -24,7 +24,7 @@ $$
 (cA)^{-1} = \frac{1}{c} A^{-1}
 $$
 
-*(Justification: $(3A)\left(\frac{1}{3}A^{-1}\right) = \left(3 \cdot \frac{1}{3}\right)(AA^{-1}) = 1 \cdot I = I$).*
+Justification: $(3A)\left(\frac{1}{3}A^{-1}\right) = \left(3 \cdot \frac{1}{3}\right)(AA^{-1}) = 1 \cdot I = I$.
 
 - **Calculation:** Applying this property with $c = 3$:
 
@@ -52,7 +52,7 @@ $$
 (A^T)^{-1} = (A^{-1})^T
 $$
 
-*(Justification: Taking the transpose of $A A^{-1} = I$ gives $(A A^{-1})^T = I^T \implies (A^{-1})^T A^T = I$, showing that $(A^{-1})^T$ is the inverse of $A^T$).*
+Justification: Taking the transpose of $A A^{-1} = I$ gives $(A A^{-1})^T = I^T \implies (A^{-1})^T A^T = I$, showing that $(A^{-1})^T$ is the inverse of $A^T$.
 
 - **Calculation:** Taking the transpose of $A^{-1}$ (swapping rows and columns):
 
@@ -72,7 +72,7 @@ $$
 (A^2)^{-1} = (A^{-1})^2
 $$
 
-*(Justification: $A^2 (A^{-1})^2 = (AA)(A^{-1}A^{-1}) = A(AA^{-1})A^{-1} = A I A^{-1} = A A^{-1} = I$).*
+Justification: $A^2 (A^{-1})^2 = (AA)(A^{-1}A^{-1}) = A(AA^{-1})A^{-1} = A I A^{-1} = A A^{-1} = I$.
 
 - **Calculation:** Squaring the matrix $A^{-1}$:
 
