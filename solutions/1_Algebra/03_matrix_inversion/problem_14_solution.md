@@ -5,16 +5,16 @@
 Assume that a square matrix $A$ satisfies
 
 $$
-A^2=I.
+A^2 = I.
 $$
 
 Show that
 
 $$
-A^{-1}=A.
+A^{-1} = A.
 $$
 
-Then give an example of a $2\times2$ matrix different from $I$ and $-I$ that satisfies this condition, and verify it by multiplication.
+Then give an example of a $2 \times 2$ matrix different from $I$ and $-I$ that satisfies this condition, and verify it by multiplication.
 
 **Solution**
 
@@ -58,7 +58,25 @@ A =
 \end{pmatrix}
 $$
 
-This matrix is clearly different from both the identity matrix $I = \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}$ and its negative $-I = \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix}$.
+This matrix is clearly different from both the identity matrix
+
+$$
+I =
+\begin{pmatrix}
+1 & 0 \\
+0 & 1
+\end{pmatrix}
+$$
+
+and its negative
+
+$$
+-I =
+\begin{pmatrix}
+-1 & 0 \\
+0 & -1
+\end{pmatrix}.
+$$
 
 **Part 3: Verification by Multiplication**
 
