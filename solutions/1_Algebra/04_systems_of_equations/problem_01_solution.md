@@ -22,6 +22,7 @@ Identify the coefficient matrix, the vector of unknowns, and the right-hand side
 The given system of three linear equations in three unknowns ($x, y, z$) can be written as a single matrix equation $Ax = b$:
 
 $$
+\begin{aligned}
 \begin{pmatrix}
 2 & -1 & 1 \\
 1 & 3 & -2 \\
@@ -32,12 +33,13 @@ x \\
 y \\
 z
 \end{pmatrix}
-=
+&=
 \begin{pmatrix}
 4 \\
 1 \\
 7
 \end{pmatrix}
+\end{aligned}
 $$
 
 **Part 2: Identifying the Matrix Components**
@@ -82,6 +84,7 @@ When performing the matrix-vector multiplication $Ax$, each row of the coefficie
 - **Row 1:** Multiplying the first row by the vector of unknowns gives:
 
 $$
+\begin{aligned}
 \begin{pmatrix}
 2 & -1 & 1
 \end{pmatrix}
@@ -90,7 +93,8 @@ x \\
 y \\
 z
 \end{pmatrix}
-= 2x - 1y + 1z
+&= 2x - 1y + 1z
+\end{aligned}
 $$
 
 Setting this equal to the first entry of $b$ recovers the first equation $2x - y + z = 4$.
@@ -98,6 +102,7 @@ Setting this equal to the first entry of $b$ recovers the first equation $2x - y
 - **Row 2:** Multiplying the second row by the vector of unknowns gives:
 
 $$
+\begin{aligned}
 \begin{pmatrix}
 1 & 3 & -2
 \end{pmatrix}
@@ -106,7 +111,8 @@ x \\
 y \\
 z
 \end{pmatrix}
-= 1x + 3y - 2z
+&= 1x + 3y - 2z
+\end{aligned}
 $$
 
 Setting this equal to the second entry of $b$ recovers the second equation $x + 3y - 2z = 1$.
@@ -114,6 +120,7 @@ Setting this equal to the second entry of $b$ recovers the second equation $x + 
 - **Row 3:** Multiplying the third row by the vector of unknowns gives:
 
 $$
+\begin{aligned}
 \begin{pmatrix}
 3 & 1 & 1
 \end{pmatrix}
@@ -122,7 +129,8 @@ x \\
 y \\
 z
 \end{pmatrix}
-= 3x + 1y + 1z
+&= 3x + 1y + 1z
+\end{aligned}
 $$
 
 Setting this equal to the third entry of $b$ recovers the third equation $3x + y + z = 7$.
