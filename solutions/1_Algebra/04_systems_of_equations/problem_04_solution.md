@@ -111,15 +111,16 @@ $$
 z = t
 $$
 
-Thus, the general solution in parametric vector form is:
+Thus, the general solution in parametric vector form (for $t \in \mathbb{R}$) is:
 
 $$
+\begin{aligned}
 \begin{pmatrix}
 x \\
 y \\
 z
 \end{pmatrix}
-=
+&=
 \begin{pmatrix}
 1 \\
 1 \\
@@ -130,7 +131,8 @@ z
 -1 \\
 0 \\
 1
-\end{pmatrix}, \quad t \in \mathbb{R}.
+\end{pmatrix}
+\end{aligned}
 $$
 
 **Part 3: Checking a Chosen Parameter Value**
