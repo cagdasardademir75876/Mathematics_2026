@@ -114,25 +114,25 @@ $$
 Thus, the general solution in parametric vector form (for $t \in \mathbb{R}$) is:
 
 $$
-\begin{aligned}
-\begin{pmatrix}
-x \\
-y \\
-z
-\end{pmatrix}
-&=
+\mathbf{x} = \mathbf{p} + t\mathbf{v}
+$$
+
+where the particular solution vector $\mathbf{p}$ and direction vector $\mathbf{v}$ are:
+
+$$
+\mathbf{p} =
 \begin{pmatrix}
 1 \\
 1 \\
 0
 \end{pmatrix}
-+ t
+\qquad
+\mathbf{v} =
 \begin{pmatrix}
 -1 \\
 0 \\
 1
 \end{pmatrix}
-\end{aligned}
 $$
 
 **Part 3: Checking a Chosen Parameter Value**
